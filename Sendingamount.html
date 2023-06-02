@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sending amount</title>
+</head>
+<body>
+<script>
+
+
+
+var ENV = "dev";
+
+
+var sendingAmount;
+
+if (ENV === "dev") {
+  sendingAmount = 10;
+} else if (ENV === "test") {
+  sendingAmount = 20;
+} else if (ENV === "stage") {
+  sendingAmount = 30;
+} else if (ENV === "prod") {
+  sendingAmount = 5;
+} else {
+  sendingAmount = 0;
+}
+
+
+console.log("Sending amount: " + sendingAmount);
+
+
+</script>
+
+
+</body>
+</html>
