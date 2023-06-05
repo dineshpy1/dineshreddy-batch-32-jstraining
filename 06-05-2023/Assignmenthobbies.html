@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About me!</title>
+</head>
+<body>
+
+<div id ="bio"></div>
+  <p>My Hobbies</p>
+  <ul id="hobbies"></ul>
+  <input type="text" id="delete-input" placeholder="Enter hobby to delete">
+  <button onclick="deleteHobby()">Delete Hobby</button>
+  <button onclick="addHobby()">Add Hobby</button>
+</div>
+
+<script>
+
+let hobbies = ["Reading", "Painting", "Cooking"];
+    function displayHobbies() {
+        document.getElementById("hobbies").innerHTML=hobbies;
+    
+    }
+
+    function addHobby() {
+      const newHobby = prompt("Enter a new hobby:");
+      if (newHobby) {
+        hobbies.push(newHobby);}
+        displayHobbies();
+      
+    }
+    
+    function deleteHobby() {
+  let deleteInput = document.getElementById("delete-input").value;
+
+  for (let i = 0; i < hobbies.length; i++) {
+    if (hobbies[i] === deleteInput) {
+      hobbies.splice(i, 1);
+      break;
+    }
+
+  }
+
+  displayHobbies();
+}
+  displayHobbies();
+  </script>
+
+</body>
+</html>
